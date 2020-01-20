@@ -336,7 +336,7 @@ VALUE rb_curl_easy_error(CURLcode code) {
     case CURLE_SSL_CIPHER:              /* 59 - couldn't use specified cipher */
       exclz = eCurlErrSSLCipher;
       break;
-#if LIBCURL_VERSION_NUM >= 0x073e0 /*7.62.0 -- fix for curl with higher version */
+#if LIBCURL_VERSION_NUM >= 0x073e00 /*7.62.0 -- fix for curl with higher version */
     case CURLE_PEER_FAILED_VERIFICATION:              /* 60 - problem with the CA cert (path?) */
       exclz = eCurlErrSSLPeerCertificate;
 #else
